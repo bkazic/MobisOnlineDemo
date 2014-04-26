@@ -1,5 +1,5 @@
 [
-{
+  {
     "name" : "CounterNode",
     "fields" : [
           { "name" : "Name", "type" : "string", "primary" : true },
