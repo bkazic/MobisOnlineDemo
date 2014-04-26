@@ -1,0 +1,32 @@
+[
+{
+    "name" : "CounterNode",
+    "fields" : [
+          { "name" : "Name", "type" : "string", "primary" : true },
+          { "name" : "Status", "type" : "string" , "null" : true},
+          { "name" : "Title", "type" : "string" , "null" : true},
+          { "name" : "Location", "type" : "float_pair"},
+          { "name" : "GeoRssPoint", "type" : "string", "null" : true},
+          { "name" : "GeoX", "type" : "float", "null" : true},
+          { "name" : "GeoY", "type" : "float", "null" : true},
+          { "name" : "Cluster", "type" : "string", "null" : true},
+          { "name" : "MaxSpeed", "type" : "float"},
+          { "name" : "RoadDescription", "type" : "string", "null" : true},
+          { "name" : "DirectionDescription", "type" : "string", "null" : true},
+          { "name" : "RoadLocation", "type" : "float", "null" : true},
+          { "name" : "DirectionLocation", "type" : "string", "null" : true},
+          { "name" : "RoadSection", "type" : "float", "null" : true},
+          { "name" : "Stationing", "type" : "float", "null" : true},
+          { "name" : "Scope", "type" : "string", "null" : true},
+          { "name" : "Source", "type" : "string", "null" : true},
+          { "name" : "Description", "type" : "string", "null" : true}
+      ],
+      "keys" : [
+          { "field" : "Name", "type" : "value" },
+          { "field" : "Status", "type" : "value" },
+          { "field" : "Cluster", "type" : "value" },
+          { "field" : "Scope", "type" : "value" },
+          { "field" : "Source", "type" : "value" }
+      ]
+  }
+]
