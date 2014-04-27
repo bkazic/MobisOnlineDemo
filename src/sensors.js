@@ -212,6 +212,15 @@ http.onGet("getModel", function (req, resp) {
   return jsonp(req, resp, modelString);
 });
 
+//http://localhost:8080/sensors/getResampledStore
+http.onGet("getPrediction", function (req, resp) {
+  if (!req.args.data) { resp.send("Missing input data"); }
+  var rs = testStoreResampled.recs;
+  var rec = rs[rs.length-1];
+  var result = rec.Prediction;
+  return jsonp(req, resp, result);
+});
+
 //localhost:8080/sensors/addCounterMeasurement?data={"DateTime":"2013-07-02T01:15:00","NumOfCars":60.0,"Gap":92.0,"Occupancy":6.0,"Speed":75.0,"TrafficStatus":1,"measuredBy":{"Name":"0016-21"}}
 http.onGet("addCounterMeasurement", function (req, resp) {
   testStore.add(JSON.parse(req.args.data));
